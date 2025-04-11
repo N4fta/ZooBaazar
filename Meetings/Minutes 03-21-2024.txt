@@ -1,0 +1,39 @@
+-Add Scroll Bar
+-Items in list of species should be able to be added or removed
+-What happens to the animals assigned to a location when the location is deleted.
+-UI should be the same in every forms.
+-Specify that the numbering is the priority in URS
+-Specify what will be there for sure and what maybe will be implemented.
+-One thing per use case.
+-Precondition needs to be a state.
+-More concrete Success scenario's
+-Test cases need to be linked to use cases.
+-Better concrete steps for test cases.
+-Make sure monkey users dont do stuff we dont want the program to do.
+-Banknumber is not only digits.
+-Dont cram a lot of info in a class. SRC
+-Think about useability
+
+Go slow during the presentation.
+make sure that the background is not scary and that we are just presenting the solution
+Fix the alignment and if possible make the UI nicer
+Do not list everything that is going on in the Zoo
+We are overwhelming the user with information about the animals and employees
+Do not have everything at the same time.
+Think people, what do you need per role? find the task per role. shortest way to find your way to tasks. Make it easier for the people that do not like using computers. as easy as possible.
+
+-dont show visual studio during demos
+-where the form opens
+-go slow in demos
+-maybe change dashboard,maybe to schedule
+-prepare better for demo, deal with csv/example data
+-IDs cant be edited. what can be?
+-Checks when deleting e.g. are there animals in location
+-Dont be implicite
+-ratio of use cases to test cases 1:3
+-specify changes in test cases
+-expected result should be testable
+-banknumber is a string
+-user split from employee
+-attendance and records on employees (eg holidays used) need to be split
+-inheritance

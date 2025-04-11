@@ -1,0 +1,137 @@
+﻿@page
+@model WebApp.Pages.EmployeeSchedule_PageModel
+@{
+    ViewData["Title"] = "Schedule page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zoo Employee Schedule</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .schedule-container {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        .week-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .day-row {
+            margin-bottom: 20px;
+        }
+
+        .task-item {
+            margin-bottom: 10px;
+        }
+
+        .date-header {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .week-card {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="week-card">
+        <div class="container">
+            <!-- Get the current date and calculate the next 3 weeks -->
+            @{
+                DateTime currentDate = DateTime.Now;
+                DateTime week1Start = currentDate;
+                DateTime week2Start = currentDate.AddDays(7); // Start 8 days after the current date to cover the next week
+                DateTime week3Start = currentDate.AddDays(14); // Start 15 days after the current date to cover the third week
+            }
+
+            <!-- Loop through each week and generate the HTML -->
+            @foreach (var weekStart in new[] { week1Start, week2Start, week3Start })
+            {
+                DateTime weekEnd = weekStart.AddDays(7); // End date is 7 days after the start date
+
+                <div class="schedule-container">
+                    <h2 class="week-header">@weekStart.ToString("d MMMM") - @weekEnd.ToString("d MMMM")</h2>
+                    <!-- Generate the tasks for this week, ordered by Date and StartTime -->
+                    @foreach (var task in Model.Tasks.Where(t => t.Date >= weekStart && t.Date < weekEnd).OrderBy(t => t.Date).ThenBy(t => t.StartTime))
+                    {
+                        <div class="day-row">
+                            <h4 class="date-header">@task.Date.ToString("dddd, MMMM d")</h4>
+                            <div class="task-item">
+                                <p>@task.Description</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@task.IdModal">View Details</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Modal windows for task details -->
+                @foreach (var task in Model.Tasks.Where(t => t.Date >= weekStart && t.Date < weekEnd).OrderBy(t => t.Date).ThenBy(t => t.StartTime))
+                {
+                    <div class="modal fade" id="@task.IdModal" tabindex="-1" role="dialog" aria-labelledby="@task.IdModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    @if (task.RepresentsShift)
+                                    {
+                                        <h5 class="modal-title" id="@task.IdModalLabel">Shift: @task.Name</h5>
+                                    }
+                                    else
+                                    {
+                                        <h5 class="modal-title" id="@task.IdModalLabel">Task: @task.Name</h5>
+                                    }
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Start: @task.StartTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                                    <p>End: @task.EndTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                                    <p>Location: @task.Location</p>
+                                    <p>Responsibilities: @task.Description</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script>
+            // Set a timer to update the HTML every week
+            setInterval(function () {
+                // Update the HTML for each week
+                $(".schedule-container").each(function (index) {
+                    var weekStart = new Date(new Date().getTime() + index * 7 * 24 * 60 * 60 * 1000);
+                    var weekEnd = new Date(weekStart.getTime() + 7 * 24 * 60 * 60 * 1000);
+                    $(this).find(".week-header").text(weekStart.toLocaleDateString() + " - " + weekEnd.toLocaleDateString());
+                    // Update the tasks for this week
+                    $(this).find(".task-item").each(function () {
+                        var taskDate = new Date($(this).find("p").text().split(" - ")[0]);
+                        if (taskDate >= weekStart && taskDate < weekEnd) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                });
+            }, 7 * 24 * 60 * 60 * 1000); // Update every week
+        </script>
+    </div>
+</body>
+</html>

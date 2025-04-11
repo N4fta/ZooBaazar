@@ -1,0 +1,5 @@
+-Edit functionality
+-Prevent it adds the same after editing
+-Overlap of contracts
+-save and update clarify
+-Warning for deleting

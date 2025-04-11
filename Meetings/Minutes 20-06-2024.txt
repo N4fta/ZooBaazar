@@ -1,0 +1,14 @@
+Remove message to say if username exists in the database
+List of employee in task needs fixing
+Message error needs to be cleared after showing
+Automatic schedule for common tasks by who is available
+Sort tasks on time maybe?
+Schedule visual improvements
+Calculate how many task in a shift can fit
+Determine what task you need per day per shift
+Assign shift to employee and then task
+What does the client/personnel need from schedule
+All shifts need to be taken by someone
+Too many employees, one takes a day off and the next week someone else a day off
+Too little employees, someone needs to fill in
+Shift lenght needs to be variable

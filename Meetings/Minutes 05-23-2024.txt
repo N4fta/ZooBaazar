@@ -1,0 +1,6 @@
+-Perfect Schedule mechanism:
++Planned Day offs needs to be taken into account
++More flexible shift system
+
+-Check Schedule and Algorythm with Client
+-Regularly update UML/Documentation (each sprint)

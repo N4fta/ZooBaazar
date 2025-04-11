@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm rounded-bottom mx-3 ">
+
+            <div class="logo-container">
+                <a href="/">
+                    <img src="~/Image/ZooBaazar_Logo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            @* ZooBaazar Name styling *@
+            <a class="navbar-brand" style="color: antiquewhite; font-size: 30px; text-shadow: -1px -1px 0 darkgreen, 1px -1px 0 darkgreen, -1px 1px 0 darkgreen, 1px 1px 0 darkgreen;" href="/">
+                ZooBaazar
+            </a>
+
+            @* Makes button collapse when screen is very small *@
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+
+
+                <ul class="navbar-nav ml-auto flex-wrap">
+                    @if (User.Identity.IsAuthenticated == false)
+                    {
+                        <li class="nav-item">
+                            <a asp-page="/Account/Login" class="nav-link" id="login-button">Login</a>
+                        </li>
+                    }
+                    @if (User.Identity.IsAuthenticated == true)
+                    {
+                        <li class="nav-item">
+                            <a asp-page="/Account/Profile" class="nav-link nav-button">My Profile</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a asp-page="/Authenticated/EmployeeSchedule_Page" class="nav-link nav-button">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-page="/Account/Logout" class="nav-link nav-button">Logout</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container-fluid justify-content-center d-grid">
+        <div class="container ">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - ZooBaazar - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

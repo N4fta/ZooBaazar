@@ -1,0 +1,2 @@
+- Priority for webpages is:  Schedule > Statistics > Tickets > Logs
+- We are a little behind on progress

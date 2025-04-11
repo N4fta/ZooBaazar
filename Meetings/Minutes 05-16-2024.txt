@@ -1,0 +1,10 @@
+-Not all animals need a relationship field (what about insects, fish, etc.?) -> Inheritance?
+-WebApp only needs Login
+-Algorithm is of very high importance (for schedule/shifts)
+-History of contracts
+-Database integration
+-Look back at the project plan for deliverables
+-Scalability is worrying
+-Focus on what Client asked for, not what you think is good
+-Make trello less abstract
+-Intermediate version presentations are for the client, less technical language

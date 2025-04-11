@@ -1,0 +1,49 @@
+-Add Agenda always
+-Documentation is not organized in git
+-Dont touch the main branch
+-Notes called Minutes
+-Client interview needs to accept the client notes to protect ourselves
+
+Project Plan:
+-Dont mention new versions in previous verions
+-Glossary in alphabetical order
+-Table of content doesnt contain 0
+-Introdruction is not numbered
+-Introduce team somewhere else in the document
+-Write the project plan for the client, so as software engineers and not as students.
+-Main question should grasp the whole project starting with "how"
+-Deliverables and Non-deliverables instead of end products
+-Risk/Mitigation could be better
+-Missing page numbers
+
+UML Class Diagram:
+-Zoo has a lot of managers instead of 1
+-Zoomanager
+-EnclosureManager has locations isntead of enclosures
+-Not satisfied with general names and types, more specific
+-Single sentence should explain the class
+-Location class responsible for more things now then one
+-A lot of more manager like classes
+-Seperate medical records
+-Animal not responsible for own medical record
+-There is no schedule
+-Preferences/skills need to add
+
+
+URS:
+-Page number, glossary like in the project plan
+-No categories for the functional requirements, Dont combine them
+-Reliablitity is not testable
+-Specify whatever we are doing for security
+-Constraints in the project plan
+-Use cases need to do again
+-Precondition need to make use of in usecases
+
+
+Prototype:
+-Should be combined with UML class diagram to be in sync
+-Notes/Medical records need to be dated
+-Bank account number/ contract of work
+-Repeated tasks should be possible
+-Select multiple employees
+-How do we use the calender.

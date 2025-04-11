@@ -1,0 +1,8 @@
+-Improve communication
+-Do standup meetings (What did you do, What are you going to do, What do you need)
+-URS needs to be updated aswell
+-Hide password
+-Message boxes only for the important stuff so deleting etc
+-Adding shifts manually and automatically
+-Need schedule in winforms
+-Bool for active/inactive employees

@@ -1,0 +1,4 @@
+- Quality Data examples
+- Demo for client should be prepared beforehand
+- Dont leave the main point for last, Algorithm is the main deliverable
+- More precise goals for sprints (strict and measurable)

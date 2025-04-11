@@ -1,0 +1,57 @@
+Is there any other specific information you would like to store about the animals?
+(“we intend to keep various data about our animals, such as their name, age, species, relationship(s) to other animals, location in the zoo, diet, etc.” )
+Health-related data or medical history 
+
+-Its not a priority, can be added later if we have time. Would be nice though.
+
+
+How flexible should the system be in handling different types of welfare tasks? Would you like to have fixed people looking out for those things in certain zoo locations? 
+Now you have multiple colleagues doing this on paper. They look at all the animals and their preferred feeding time and diet and then you try to assign one or more employees to do the task per zone which leads to the problem of looking up a lot of information and error-prones. 
+
+-The person gets assigned to a part of a zoo when they are hired.
+
+
+You previously mentioned you wanted to “be able to search for specific animals (...) and look at their details and adjust their information”. In what ways do you want the information displayed? E.g. Graphs, tables, JSON/CSV files for exporting
+
+-In JSON if we know how to do it. 
+
+
+Do you have any specific features you would like to include in the website for the employees?
+Viewing schedules?
+Updating personal information?
+Accepting appointed tasks?
+
+-Viewing schedules(must have), Accept appointed tasks(not a must have, would make it more difficult)
+
+
+Would you like to have any communication features within the website for the employees?
+A small group chat within areas of the zoo to know what’s going on around the place.
+
+-Good idea but wouldnt do  only if we have time.
+
+
+Do you have a logo or palette scheme you want us to implement? Considering you want to make a website for clients to use and buy tickets the aesthetics should not clash with your logo/brand.
+
+-Whatever we choose
+
+
+Are you interested in a page reporting the current status of animals?
+
+-Reporting is for the second stage
+
+
+Are you interested in having a personal schedule for each employee with a task completion feature?
+
+-Only viewing the schedule.
+
+
+Notes:
+-Employee Management / Animal Management must have in waterfall phase.
+-Risk Mitigation is good to have.
+-Only Unit Testing for the testing strategy.
+-Not enough time for pipelines.
+-First Employee Management, Animal Management second.
+
+Requirements:
+-CRUD
+-Employee Management most important

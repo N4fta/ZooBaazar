@@ -1,0 +1,30 @@
+﻿@page
+@model WebApp.Pages.LogoutModel
+@{
+    ViewData["Title"] = "Log Out";
+}
+<div class="logout-form card">
+    <h2 class="card-header">Log out</h2>
+    <div class="card-body">
+        <form method="post">
+            <div class="centered-container">
+                <p>Are you sure you want to log out?</p>
+            </div>
+            <div class="centered-container">
+                <button type="submit" name="action" value="cancel" class="btn btn-secondary">Cancel</button>
+                <button type="submit" name="action" value="logout" class="btn btn-primary">Log out</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    .centered-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+        .centered-container button[type="submit"] {
+            margin: 0 10px;
+        }
+</style>

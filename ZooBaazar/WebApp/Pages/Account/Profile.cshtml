@@ -1,0 +1,86 @@
+﻿@page
+@model WebApp.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Add this line to link to your custom CSS file -->
+    <style>
+        /* Add some margin to the bottom of the profile card */
+        .profile-card {
+            margin-bottom: 50px; /* adjust this value to create more space */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="profile-card">
+                <h3 class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Name:</span> <span>@Model.Name</span></h3>
+                <ul class="list-unstyled mb-1-9">
+                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> <span>@Model.Email</span></li>
+                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> <span>@Model.PhoneNumber</span></li>
+                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> <span>@Model.Address</span></li>
+                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Username:</span> <span>@Model.Username</span></li>
+                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Date of Birth:</span> <span>@Model.Birthday</span></li>
+                </ul>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Update Password</button>
+            </div>
+        </div>
+
+        <!-- Update Modal -->
+        <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="updateModalLabel">Update Password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-page-handler="UpdatePassword" method="post">
+                            <div class="form-group">
+                                <label for="oldPassword">Old Password</label>
+                                <input type="password" class="form-control" id="oldPassword" name="oldPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script>
+            document.getElementById('updateForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const newPassword = document.getElementById('newPassword').value;
+
+                document.getElementById('employee-password').innerText = '********';
+
+                $('#updateModal').modal('hide');
+            });
+        </script>
+
+</body>
+</html>
