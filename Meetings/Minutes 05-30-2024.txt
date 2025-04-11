@@ -1,5 +1,0 @@
-- Ask client via mail if urgent
-- Constraint for duplicate users
-- No hardcoded shift hours
-- Manual change after automatic generation schedule
-- Activity diagram after whiteboard diagram

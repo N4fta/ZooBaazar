@@ -1,7 +1,0 @@
--Not every week a client meeting because its a waterfall stage.
--Animal Information: residence, cage location(enum), diet, date of entering zoo, date of leaving zoo, origin, birthdate, species, parent or not
--Employee Information: job position, phone number, adress, bsn number (TIN)
--Task information: Define group of animals by location in the zoo so employee gets close tasks by location or put the employee on rest for a certain time between tasks for transportation.
--No schedule in winform, this will be in the webpage after waterfall.
--CRUD, when u add animals it should include location and date of birth. When registering an animal add a parental/child bool. And if the child/parent is there aswell.
--possible to create new zones and to edit animal locations if theyre moved.
