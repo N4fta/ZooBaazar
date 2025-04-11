@@ -46,7 +46,6 @@ This software uses:
 - [WinForms](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-9.0)
 - [Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-9.0)
 - [MSSQL](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Filezilla](https://filezilla-project.org/)
 
 Created with the help of some Fontys students at [Fontys](https://www.fontys.nl/).
 
