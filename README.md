@@ -33,11 +33,11 @@
 
 ## Retrospective
 
-This semester was more focused on the using the correct process, Agile methodologies, OOP and other important concepts. While the project looks as or less impressive than the previous one, the code is miles ahead. Although it is still quite spaghetti at times.
+This semester was more focused on the using the correct process, Agile methodologies, OOP and other important concepts. While the project looks as or less impressive than the previous one, the code is miles ahead. Although it is still quite spaghetti at times. A lot of the worktime was also taken up by learning about, and writing, various documentation and diagrams.
 
 I learned a lot of concepts and patterns that I uses in the next project midway when it was too late to implement them, as well as more grueling stuff like dealing with client requirements and long term planning.
 
-This was also my first time using databases, segmenting my project into libraries and hosting websites and databases. My first, "real", medium scale, professional project. Overall, a very educational project.
+This was also my first time using databases, segmenting my project into libraries, doing proper documentation, and hosting websites and databases. My first, "real", medium scale, professional project. Overall, a very educational project.
 
 ## Credits
 
