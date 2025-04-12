@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">The group project counterpart to <a href="https://github.com/N4fta/RSS-Hamster" target="_blank">RSS Hamster</a>, build with WinForms for a desktop application and ASP.NET Razor Pages for a web interface.</h4>
+<h4 align="center">The group project counterpart to <a href="https://github.com/N4fta/RSS-Hamster" target="_blank">RSS Hamster</a>, built with WinForms for a desktop application and ASP.NET Razor Pages for a web interface.</h4>
 
 <!-- Horizontal short Menu (w\ Links) -->
 <p align="center">
@@ -23,7 +23,7 @@
 - Animal tracker
 - Task tracker
 - Location manager
-- Automatic scheduling & assignment to employees
+- Automatic scheduling and assignment to employees
 
 ## Gallery
 
@@ -33,11 +33,11 @@
 
 ## Retrospective
 
-This semester was more focused on the using the correct process, Agile methodologies, OOP and other important concepts. While the project looks as or less impressive than the previous one, the code is miles ahead. Although it is still quite spaghetti at times. A lot of the worktime was also taken up by learning about, and writing, various documentation and diagrams.
+This semester was more focused on using the correct process, Agile methodologies, OOP and other important concepts. While the project looks as or less impressive than the previous one, the code is miles ahead. Although it is still quite spaghetti at times. A lot of the work time was also taken up by learning about and writing various documentation and diagrams.
 
-I learned a lot of concepts and patterns that I uses in the next project midway when it was too late to implement them, as well as more grueling stuff like dealing with client requirements and long term planning.
+I learned a lot of concepts and patterns that I use in the next project midway when it was too late to implement them, as well as more grueling stuff like dealing with client requirements and long-term planning.
 
-This was also my first time using databases, segmenting my project into libraries, doing proper documentation, and hosting websites and databases. My first, "real", medium scale, professional project. Overall, a very educational project.
+This was also my first time using databases, segmenting my project into libraries, doing proper documentation, and hosting websites and databases. My first, "real," medium-scale, professional project. Overall, a very educational project.
 
 ## Credits
 
